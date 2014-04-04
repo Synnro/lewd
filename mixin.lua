@@ -1,13 +1,13 @@
 --[[
 =======================================================================================
-	mixin object
-	
-	About:		The mixin object provides functionality to an entity.
-	
-	Functions:	mixin.new( type )	- returns a new instance of our mixin object
-				mixin:init()		- overridable method that is called once our mixin is
-										added to our entity
-		
+    mixin object
+
+    About:      The mixin object provides functionality to an entity.
+
+    Functions:	mixin.new( type )	- returns a new instance of our mixin object
+                mixin:init()        - overridable method that is called once our mixin is
+                                      added to our entity
+
 ========================================================================================
 ]]--
 local mixin = {}
@@ -16,8 +16,8 @@ local mixin = {}
 -- returns a new instance of the mixin
 -- the tag parameter is a string that identifies the mixin
 function mixin.new( tag )
-	if not tag then error( "new mixin requires a tag..." ) end
-	return setmetatable( { tag = tag }, { __index = mixin } )
+    if not tag then error( "new mixin requires a tag..." ) end
+    return setmetatable( { tag = tag }, { __index = mixin } )
 end
 
 -- mixin:init()
